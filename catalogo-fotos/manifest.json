@@ -1699,9 +1699,374 @@
       "original_sha256": "ea538a7cb062b89e5a83cc71781593ad31c10be53c58b9854c00c885af3baa7c",
       "card": "catalogo-fotos/derivados/3038e7be5bbd-tiger-blanco-card.webp",
       "gallery": "catalogo-fotos/derivados/3038e7be5bbd-tiger-blanco-gallery.webp"
+    },
+    "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/16333c8a-edf0-4f04-a0b4-aae3c5070f69.jpg?raw=true": {
+      "original_file": null,
+      "original_url": "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/16333c8a-edf0-4f04-a0b4-aae3c5070f69.jpg?raw=true",
+      "original_sha256": "c089b61abaae94ad4b1be476766661fe5aa24895ebc3440e43fd51444d71aeea",
+      "card": "catalogo-fotos/derivados/5ff14efad46d-remote-card.webp",
+      "card_meta": {
+        "bytes": 14146,
+        "width": 360,
+        "height": 480,
+        "quality": 84,
+        "psnr_db": 37.85,
+        "reused_existing": false,
+        "target_exceeded": false
+      },
+      "gallery": "catalogo-fotos/derivados/5ff14efad46d-remote-gallery.webp",
+      "gallery_meta": {
+        "bytes": 105722,
+        "width": 900,
+        "height": 1200,
+        "quality": 84,
+        "psnr_db": 39.27,
+        "reused_existing": false,
+        "target_exceeded": false
+      }
+    },
+    "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/255f4410-b4d9-4130-9fe0-6d0f83e45efc.jpg?raw=true": {
+      "original_file": null,
+      "original_url": "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/255f4410-b4d9-4130-9fe0-6d0f83e45efc.jpg?raw=true",
+      "original_sha256": "023e283c50d7307a579ca459b364bcadf7aec9b3dd4aff883b5577073ac44fe2",
+      "card": "catalogo-fotos/derivados/fbb7b955f2f4-remote-card.webp",
+      "card_meta": {
+        "bytes": 11334,
+        "width": 360,
+        "height": 480,
+        "quality": 84,
+        "psnr_db": 40.14,
+        "reused_existing": false,
+        "target_exceeded": false
+      },
+      "gallery": "catalogo-fotos/derivados/fbb7b955f2f4-remote-gallery.webp",
+      "gallery_meta": {
+        "bytes": 92830,
+        "width": 900,
+        "height": 1200,
+        "quality": 84,
+        "psnr_db": 39.78,
+        "reused_existing": false,
+        "target_exceeded": false
+      }
+    },
+    "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/7bb90bb0-88d1-4e56-b319-76dedfc4702c.jpg?raw=true": {
+      "original_file": null,
+      "original_url": "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/7bb90bb0-88d1-4e56-b319-76dedfc4702c.jpg?raw=true",
+      "original_sha256": "d5022b85e3381b4c4be6e47caae6b728adb808bb65588d39f3fabb0b21cbd146",
+      "card": "catalogo-fotos/derivados/22cbad63c01c-remote-card.webp",
+      "card_meta": {
+        "bytes": 13870,
+        "width": 360,
+        "height": 480,
+        "quality": 84,
+        "psnr_db": 39.6,
+        "reused_existing": false,
+        "target_exceeded": false
+      },
+      "gallery": "catalogo-fotos/derivados/22cbad63c01c-remote-gallery.webp",
+      "gallery_meta": {
+        "bytes": 105786,
+        "width": 900,
+        "height": 1200,
+        "quality": 84,
+        "psnr_db": 39.68,
+        "reused_existing": false,
+        "target_exceeded": false
+      }
+    },
+    "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/Body%20Florencia%20(1).webp?raw=true": {
+      "original_file": null,
+      "original_url": "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/Body%20Florencia%20(1).webp?raw=true",
+      "original_sha256": "33b21a0748ff1316032c773b1b48f526320255e54e0032893c511589d2444693",
+      "card": "catalogo-fotos/derivados/fa0c0e62fcb2-remote-card.webp",
+      "card_meta": {
+        "bytes": 26190,
+        "width": 322,
+        "height": 480,
+        "quality": 84,
+        "psnr_db": 37.27,
+        "reused_existing": false,
+        "target_exceeded": false
+      },
+      "gallery": "catalogo-fotos/derivados/fa0c0e62fcb2-remote-gallery.webp",
+      "gallery_meta": {
+        "reused_remote_webp": true,
+        "bytes": 80530,
+        "width": 480,
+        "height": 716,
+        "format": "WEBP"
+      }
+    },
+    "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/Body%20Florencia%20(2).webp?raw=true": {
+      "original_file": null,
+      "original_url": "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/Body%20Florencia%20(2).webp?raw=true",
+      "original_sha256": "2a43a8679e902a27c7737247008d4a842b876b9756e5e369fdc4f9816781d47b",
+      "card": "catalogo-fotos/derivados/d8b465a523c9-remote-card.webp",
+      "card_meta": {
+        "bytes": 16582,
+        "width": 322,
+        "height": 480,
+        "quality": 84,
+        "psnr_db": 38.93,
+        "reused_existing": false,
+        "target_exceeded": false
+      },
+      "gallery": "catalogo-fotos/derivados/d8b465a523c9-remote-gallery.webp",
+      "gallery_meta": {
+        "reused_remote_webp": true,
+        "bytes": 48400,
+        "width": 480,
+        "height": 716,
+        "format": "WEBP"
+      }
+    },
+    "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/Body%20Wild%20(1).webp?raw=true": {
+      "original_file": null,
+      "original_url": "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/Body%20Wild%20(1).webp?raw=true",
+      "original_sha256": "4f6bcf5610d6b0e69994a0035be637e14f7ba15a9eaa68754fa9cd17e82dd558",
+      "card": "catalogo-fotos/derivados/aa88a372c02e-remote-card.webp",
+      "card_meta": {
+        "bytes": 16858,
+        "width": 322,
+        "height": 480,
+        "quality": 84,
+        "psnr_db": 38.11,
+        "reused_existing": false,
+        "target_exceeded": false
+      },
+      "gallery": "catalogo-fotos/derivados/aa88a372c02e-remote-gallery.webp",
+      "gallery_meta": {
+        "bytes": 161198,
+        "width": 805,
+        "height": 1200,
+        "quality": 84,
+        "psnr_db": 38.08,
+        "reused_existing": false,
+        "target_exceeded": false
+      }
+    },
+    "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/Body%20Wild%20(2).webp?raw=true": {
+      "original_file": null,
+      "original_url": "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/Body%20Wild%20(2).webp?raw=true",
+      "original_sha256": "d3e8e07aac7172e674e373dae09fde3d7b4364f767b271028e3f07115678f707",
+      "card": "catalogo-fotos/derivados/01cda637ffff-remote-card.webp",
+      "card_meta": {
+        "bytes": 6902,
+        "width": 322,
+        "height": 480,
+        "quality": 84,
+        "psnr_db": 42.13,
+        "reused_existing": false,
+        "target_exceeded": false
+      },
+      "gallery": "catalogo-fotos/derivados/01cda637ffff-remote-gallery.webp",
+      "gallery_meta": {
+        "bytes": 26778,
+        "width": 805,
+        "height": 1200,
+        "quality": 84,
+        "psnr_db": 43.89,
+        "reused_existing": false,
+        "target_exceeded": false
+      }
+    },
+    "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/Body%20con%20Broches%20celeste.webp?raw=true": {
+      "original_file": null,
+      "original_url": "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/Body%20con%20Broches%20celeste.webp?raw=true",
+      "original_sha256": "cfe30c777a4bea78e383972f63c9cdd546968eb91c1ded4f5d677a482ae68606",
+      "card": "catalogo-fotos/derivados/3121ef91dbf8-remote-card.webp",
+      "card_meta": {
+        "bytes": 8036,
+        "width": 322,
+        "height": 480,
+        "quality": 84,
+        "psnr_db": 40.84,
+        "reused_existing": false,
+        "target_exceeded": false
+      },
+      "gallery": "catalogo-fotos/derivados/3121ef91dbf8-remote-gallery.webp",
+      "gallery_meta": {
+        "bytes": 38424,
+        "width": 805,
+        "height": 1200,
+        "quality": 84,
+        "psnr_db": 41.84,
+        "reused_existing": false,
+        "target_exceeded": false
+      }
+    },
+    "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/Body%20con%20broches%20blanco.webp?raw=true": {
+      "original_file": null,
+      "original_url": "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/Body%20con%20broches%20blanco.webp?raw=true",
+      "original_sha256": "852170a4971998c4f7a3a511427699e901487675f0563934dbd7ff629297cfc9",
+      "card": "catalogo-fotos/derivados/40936bc6c448-remote-card.webp",
+      "card_meta": {
+        "bytes": 5070,
+        "width": 322,
+        "height": 480,
+        "quality": 84,
+        "psnr_db": 43.39,
+        "reused_existing": false,
+        "target_exceeded": false
+      },
+      "gallery": "catalogo-fotos/derivados/40936bc6c448-remote-gallery.webp",
+      "gallery_meta": {
+        "reused_remote_webp": true,
+        "bytes": 20808,
+        "width": 480,
+        "height": 716,
+        "format": "WEBP"
+      }
+    },
+    "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/Conjunto%20Arturo%20Aero%20(2).jpeg?raw=true": {
+      "original_file": null,
+      "original_url": "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/Conjunto%20Arturo%20Aero%20(2).jpeg?raw=true",
+      "original_sha256": "c2f6a21d87fd4c96323694c7c6d696291b8601b8e0eb169d30341a2f06b02077",
+      "card": "catalogo-fotos/derivados/e4b4c1b7e881-remote-card.webp",
+      "card_meta": {
+        "bytes": 26508,
+        "width": 361,
+        "height": 480,
+        "quality": 84,
+        "psnr_db": 36.84,
+        "reused_existing": false,
+        "target_exceeded": false
+      },
+      "gallery": "catalogo-fotos/derivados/e4b4c1b7e881-remote-gallery.webp",
+      "gallery_meta": {
+        "bytes": 167458,
+        "width": 903,
+        "height": 1200,
+        "quality": 84,
+        "psnr_db": 38.25,
+        "reused_existing": false,
+        "target_exceeded": false
+      }
+    },
+    "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/Conjunto%20Arturo%20Aero%20(3).jpeg?raw=true": {
+      "original_file": null,
+      "original_url": "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/Conjunto%20Arturo%20Aero%20(3).jpeg?raw=true",
+      "original_sha256": "80b9d376d6f4ddcdf22edb4f76ec341404d063373f964cc23fd3094574bd948a",
+      "card": "catalogo-fotos/derivados/9eb4511ef8dd-remote-card.webp",
+      "card_meta": {
+        "bytes": 16880,
+        "width": 361,
+        "height": 480,
+        "quality": 84,
+        "psnr_db": 37.69,
+        "reused_existing": false,
+        "target_exceeded": false
+      },
+      "gallery": "catalogo-fotos/derivados/9eb4511ef8dd-remote-gallery.webp",
+      "gallery_meta": {
+        "bytes": 94616,
+        "width": 903,
+        "height": 1200,
+        "quality": 84,
+        "psnr_db": 39.52,
+        "reused_existing": false,
+        "target_exceeded": false
+      }
+    },
+    "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/Conjunto%20Arturo%20Aero%20(4).jpeg?raw=true": {
+      "original_file": null,
+      "original_url": "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/Conjunto%20Arturo%20Aero%20(4).jpeg?raw=true",
+      "original_sha256": "f34d3312b76008ea89eff1574c9488060dd7180ded6f0ae2ba614dd3156aa83f",
+      "card": "catalogo-fotos/derivados/5acce3c7f527-remote-card.webp",
+      "card_meta": {
+        "bytes": 23026,
+        "width": 361,
+        "height": 480,
+        "quality": 84,
+        "psnr_db": 37.31,
+        "reused_existing": false,
+        "target_exceeded": false
+      },
+      "gallery": "catalogo-fotos/derivados/5acce3c7f527-remote-gallery.webp",
+      "gallery_meta": {
+        "bytes": 167846,
+        "width": 903,
+        "height": 1200,
+        "quality": 84,
+        "psnr_db": 37.39,
+        "reused_existing": false,
+        "target_exceeded": false
+      }
+    },
+    "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/Conjunto%20Arturo%20Beige%20(1).webp?raw=true": {
+      "original_file": null,
+      "original_url": "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/Conjunto%20Arturo%20Beige%20(1).webp?raw=true",
+      "original_sha256": "8d20b56c3000014997649f6edd30fed04293fb2b6f3676e6f3a85670e8fc76c5",
+      "card": "catalogo-fotos/derivados/887f18aca7db-remote-card.webp",
+      "card_meta": {
+        "bytes": 17034,
+        "width": 322,
+        "height": 480,
+        "quality": 84,
+        "psnr_db": 38.3,
+        "reused_existing": false,
+        "target_exceeded": false
+      },
+      "gallery": "catalogo-fotos/derivados/887f18aca7db-remote-gallery.webp",
+      "gallery_meta": {
+        "reused_remote_webp": true,
+        "bytes": 91214,
+        "width": 480,
+        "height": 716,
+        "format": "WEBP"
+      }
+    },
+    "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/Conjunto%20Arturo%20Beige%20(2).webp?raw=true": {
+      "original_file": null,
+      "original_url": "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/Conjunto%20Arturo%20Beige%20(2).webp?raw=true",
+      "original_sha256": "fdd1994d9430a58ea10e10471b78b52dff5bfc422824b98f4a3ceb300adc8c41",
+      "card": "catalogo-fotos/derivados/808db492a909-remote-card.webp",
+      "card_meta": {
+        "bytes": 19622,
+        "width": 322,
+        "height": 480,
+        "quality": 84,
+        "psnr_db": 38.15,
+        "reused_existing": false,
+        "target_exceeded": false
+      },
+      "gallery": "catalogo-fotos/derivados/808db492a909-remote-gallery.webp",
+      "gallery_meta": {
+        "bytes": 106290,
+        "width": 804,
+        "height": 1200,
+        "quality": 84,
+        "psnr_db": 39.21,
+        "reused_existing": false,
+        "target_exceeded": false
+      }
+    },
+    "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/Conjunto%20Arturo%20Beige%20(3).webp?raw=true": {
+      "original_file": null,
+      "original_url": "https://github.com/magicoamorbebe-bot/magicoamor/blob/main/imagenes/Conjunto%20Arturo%20Beige%20(3).webp?raw=true",
+      "original_sha256": "81893461cf1b626729fcf7519ecc8b01afbc3b96c4fc49a95a5e3218de620709",
+      "card": "catalogo-fotos/derivados/0c323c4877c0-remote-card.webp",
+      "card_meta": {
+        "bytes": 30364,
+        "width": 322,
+        "height": 480,
+        "quality": 84,
+        "psnr_db": 37.02,
+        "reused_existing": false,
+        "target_exceeded": false
+      },
+      "gallery": "catalogo-fotos/derivados/0c323c4877c0-remote-gallery.webp",
+      "gallery_meta": {
+        "reused_remote_webp": true,
+        "bytes": 116316,
+        "width": 480,
+        "height": 716,
+        "format": "WEBP"
+      }
     }
   },
-  "generator": "tools/optimize_catalog_images.py",
+  "generator": "tools/optimize_remote_catalog_images.py",
   "settings": {
     "card": {
       "max_dimension": 480,

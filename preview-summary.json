@@ -1,7 +1,7 @@
 {
-  "products_expected": 226,
-  "manifest_entries": 283,
-  "optimized_files": 562,
+  "products_expected": 233,
+  "manifest_entries": 298,
+  "optimized_files": 592,
   "base_url": "https://magicoamorbebe-bot.github.io/magicoamor-preview/",
   "contains_cname": false,
   "preview_mode": true
