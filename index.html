@@ -48,7 +48,15 @@ body{font-family:system-ui,-apple-system,sans-serif;background:var(--cream);colo
 .products{padding:16px}
 .sec-label{font-size:10px;letter-spacing:1px;color:var(--soft);text-transform:uppercase;margin-bottom:12px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+.grid.grouped{display:block}
+.product-group{margin:0 0 34px}
+.product-group:last-child{margin-bottom:0}
+.product-group-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0 2px 12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.product-group-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--brown)}
+.product-group-count{font-size:10px;letter-spacing:.7px;text-transform:uppercase;color:var(--soft);white-space:nowrap}
+.product-group-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
 @media(max-width:480px){.grid{grid-template-columns:repeat(2,1fr);gap:8px}}
+@media(max-width:480px){.product-group-grid{grid-template-columns:repeat(2,1fr);gap:8px}.product-group{margin-bottom:28px}.product-group-title{font-size:18px}}
 .stock-badge{position:absolute;top:5px;right:5px;font-size:9px;padding:2px 6px;border-radius:7px;font-weight:600}
 .stock-badge.low{background:#FFF3E0;color:#C47000;border:1px solid #F5C842}
 .stock-badge.out{background:#FDE8E8;color:#A32D2D;border:1px solid #F09595}
@@ -583,7 +591,10 @@ if(p)valid.push(p);else console.warn('Producto omitido por datos inválidos en l
 if(!valid.length)throw new Error('El catálogo no contiene productos válidos');
 await manifestPromise;
 PRODUCTS=valid.map(function(p,index){p._catalogIndex=index;return p;});
-buildCatNav();renderProducts('all');
+const requestedCategory=(new URLSearchParams(location.search).get('categoria')||'').trim().toLowerCase();
+const matchedCategory=[...new Set(PRODUCTS.map(p=>p.cat))].find(c=>c.toLowerCase()===requestedCategory);
+currentCat=matchedCategory||'all';
+buildCatNav();renderProducts(currentCat);
 return PRODUCTS;
 }catch(e){
 lastError=e;
@@ -643,7 +654,7 @@ _sourceIndex:index
 
 function buildCatNav(){
 const cats=['all',...new Set(PRODUCTS.map(p=>p.cat))];
-document.getElementById('cat-nav').innerHTML=cats.map((c,i)=>'<button class="cat-btn'+(i===0?' active':'')+'" onclick="filterCat(\''+c+'\',this)">'+(c==='all'?'Todo':c.charAt(0).toUpperCase()+c.slice(1))+'</button>').join('');
+document.getElementById('cat-nav').innerHTML=cats.map(c=>'<button class="cat-btn'+(c===currentCat?' active':'')+'" onclick="filterCat(\''+c+'\',this)">'+(c==='all'?'Todo':c.charAt(0).toUpperCase()+c.slice(1))+'</button>').join('');
 }
 
 function filterCat(cat,btn){
@@ -711,6 +722,7 @@ return'<div class="pcard" onclick="openProduct('+p._catalogIndex+')">'
 
 function renderList(items){
 const grid=document.getElementById('product-grid');
+grid.classList.remove('grouped');
 if(!items.length){grid.innerHTML='<div class="loading-wrap"><div style="font-size:13px;color:var(--muted)">No hay productos con ese filtro 💛</div></div>';return;}
 bindImageFallbacks(grid);
 grid.innerHTML=items.map(p=>buildCard(p)).join('');
@@ -720,9 +732,16 @@ function renderProducts(cat){
 currentCat=cat;
 const items=cat==='all'?PRODUCTS:PRODUCTS.filter(p=>p.cat===cat);
 const grid=document.getElementById('product-grid');
+grid.classList.toggle('grouped',cat==='all');
 if(!items.length){grid.innerHTML='<div class="loading-wrap"><div style="font-size:13px;color:var(--muted)">No hay productos en esta categoría 💛</div></div>';return;}
 bindImageFallbacks(grid);
-grid.innerHTML=items.map(p=>buildCard(p)).join('');
+if(cat!=='all'){grid.innerHTML=items.map(p=>buildCard(p)).join('');return;}
+const groups=new Map();
+items.forEach(function(p){if(!groups.has(p.cat))groups.set(p.cat,[]);groups.get(p.cat).push(p);});
+grid.innerHTML=[...groups.entries()].map(function(entry){
+const name=entry[0],products=entry[1];
+return'<section class="product-group"><div class="product-group-head"><h2 class="product-group-title">'+name.charAt(0).toUpperCase()+name.slice(1)+'</h2><span class="product-group-count">'+products.length+' producto'+(products.length!==1?'s':'')+'</span></div><div class="product-group-grid">'+products.map(p=>buildCard(p)).join('')+'</div></section>';
+}).join('');
 }
 
 function openProduct(catalogIndex){
@@ -841,7 +860,8 @@ buildCarrusel();
 // Historia: se abre sola SOLO si la visita no viene de un anuncio o red social.
 // Quien clickea una publicidad va directo al catálogo; quien entra directo/orgánico ve la historia.
 const esDeAnuncio=/[?&](fbclid|gclid|ttclid|utm_source|utm_medium|utm_campaign)=/i.test(location.search)||/facebook\.com|instagram\.com|l\.instagram/i.test(document.referrer);
-if(!esDeAnuncio)mostrarHistoria();
+const vieneDePortada=/home-v2\.html/i.test(document.referrer)||new URLSearchParams(location.search).has('categoria');
+if(!esDeAnuncio&&!vieneDePortada)mostrarHistoria();
 iniciarToasts();
 </script>
 </body>
