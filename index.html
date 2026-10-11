@@ -26,17 +26,25 @@
 {"@context":"https://schema.org","@type":"Store","name":"Mágico Amor","description":"Tienda de ropita de bebé en Franck, Santa Fe, Argentina. Bodies, conjuntos, enteritos y más, del talle RN al 12-24m.","url":"https://magicoamorbebe-bot.github.io/magicoamor-preview/","logo":"https://magicoamorbebe-bot.github.io/magicoamor-preview/logo.png","image":"https://magicoamorbebe-bot.github.io/magicoamor-preview/logo.png","telephone":"+5493425164672","address":{"@type":"PostalAddress","addressLocality":"Franck","addressRegion":"Santa Fe","addressCountry":"AR"},"sameAs":["https://instagram.com/magicoamor.bebe"],"priceRange":"$$","paymentAccepted":"Transferencia, Mercado Pago, Efectivo, Tarjeta"}
 </script>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&family=Satisfy&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--gold:#C9A040;--gold-lt:#F7EDCC;--gold-dk:#8B6510;--cream:#FDFAF4;--cream2:#F5EFE0;--text:#2C1F10;--muted:#8A7055;--soft:#C4A97A;--border:#EEE0C8}
-body{font-family:system-ui,-apple-system,sans-serif;background:var(--cream);color:var(--text)}
+:root{--gold:#d4af37;--gold-lt:#F7EDCC;--gold-dk:#9c6b18;--cream:#FDFAF4;--cream2:#F5EFE0;--text:#594431;--muted:#8c745e;--soft:#C4A97A;--border:#eadfce}
+body{font-family:"DM Sans",system-ui,sans-serif;background:var(--cream);color:var(--text)}
 
 /* ── HERO (original) ── */
-.hero{background:linear-gradient(160deg,#FDF6E3,#FBF0F4 50%,#EEF6FB);padding:28px 20px 20px;text-align:center;border-bottom:1px solid var(--border)}
-.hero h1{font-size:22px;font-weight:600}
-.hero-sub{font-size:12px;color:var(--muted);margin-top:4px}
-.hero-phrase{font-size:11px;color:var(--soft);margin-top:6px;font-style:italic}
+.hero{position:relative;isolation:isolate;overflow:hidden;min-height:490px;display:grid;place-items:center;padding:54px 20px 72px;text-align:center;background:radial-gradient(circle at 12% 18%,rgba(255,255,255,.95) 0 5%,transparent 22%),radial-gradient(circle at 90% 20%,rgba(255,255,255,.8) 0 4%,transparent 20%),linear-gradient(145deg,#fcf4e3 0%,#f8edf0 54%,#edf5f5 100%);border-bottom:1px solid var(--border)}
+.hero::before,.hero::after{content:"";position:absolute;z-index:-1;width:250px;aspect-ratio:1;border-radius:48% 52% 44% 56%;filter:blur(2px);opacity:.33}.hero::before{left:-80px;bottom:-100px;background:#efd7c5;transform:rotate(20deg)}.hero::after{right:-70px;top:-80px;background:#d7e7e5;transform:rotate(-18deg)}
+.hero-inner{max-width:780px}.logo-wrap{width:168px;margin:0 auto 24px;overflow:hidden;border-radius:50%;filter:drop-shadow(0 12px 22px rgba(135,98,32,.18))}.logo-wrap img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;transform:scale(1.035)}
+.hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(38px,6vw,66px);font-weight:500;line-height:1.05;letter-spacing:-.03em;max-width:720px;margin:0 auto;color:var(--text)}
+.hero h1 em{color:var(--gold-dk);font-weight:500}.hero-sub{font-size:11px;color:var(--gold-dk);margin:0 0 12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+.hero-phrase{font-size:clamp(15px,2vw,18px);color:var(--muted);margin:22px auto 0;max-width:590px;line-height:1.7}
+.hero-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:28px}.hero-action{display:inline-flex;align-items:center;justify-content:center;min-width:190px;min-height:46px;padding:0 22px;border:1px solid var(--gold);border-radius:999px;background:rgba(255,255,255,.7);color:var(--gold-dk);font-size:13px;font-weight:600;text-decoration:none}
+.home-return{position:absolute;top:16px;left:16px;display:inline-flex;align-items:center;gap:5px;border:1px solid var(--border);border-radius:999px;background:rgba(255,255,255,.88);padding:8px 12px;color:var(--gold-dk);font-size:11px;font-weight:700;text-decoration:none;box-shadow:0 5px 16px rgba(80,52,24,.08)}
+.category-view .hero{overflow:visible;min-height:0;margin-top:42px;padding:58px 20px 20px;background:linear-gradient(90deg,#f5eadf,#fff9ef 48%,#edf3f1);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}.category-view .hero::before,.category-view .hero::after{display:none}.category-view .logo-wrap{position:absolute;top:-43px;left:50%;width:96px;margin:0;transform:translateX(-50%);border:6px solid var(--cream);background:var(--gold);box-shadow:0 10px 25px rgba(100,73,43,.16)}.category-view .hero-sub{margin:0 0 5px}.category-view .hero h1{font-size:clamp(28px,3.2vw,40px);line-height:1}.category-view .hero-phrase{margin-top:8px;font-size:12px;line-height:1.45}.category-view .hero-actions{display:none}.category-view .shop-path{display:none}.category-view .products{width:min(1280px,calc(100% - 32px));padding-top:26px}.category-view .home-return{top:12px}.category-view .search-bar{width:min(1280px,calc(100% - 32px));margin:12px auto 0;border:1px solid var(--border);border-radius:12px}.category-view .cat-nav{justify-content:center;border-top:0}.category-view .product-group-grid,.category-view #product-grid:not(.grouped){grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.category-view .pcard-img{height:auto;aspect-ratio:4/5}.category-view .pcard{border-radius:10px}.category-view .pcard-body{padding:11px}
+.category-size-quick{display:none}.category-view .category-size-quick{display:flex;justify-content:center;align-items:center;gap:7px;flex-wrap:wrap;margin:0;padding:8px 12px;background:rgba(253,250,244,.97);border-bottom:1px solid var(--border)}.category-size-quick>span{margin-right:3px;color:var(--muted);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.8px}.size-quick-btn{min-width:34px;height:30px;padding:0 9px;border:1px solid rgba(156,107,24,.35);border-radius:999px;background:rgba(255,255,255,.78);color:var(--gold-dk);font:600 10px 'DM Sans',sans-serif;cursor:pointer}.size-quick-btn:hover,.size-quick-btn.active{background:var(--gold);border-color:var(--gold);color:#fff}.category-view .talle-select{display:none}
+.catalog-tools-sticky{position:relative;z-index:180;background:var(--cream)}.category-view .catalog-tools-sticky{position:sticky;top:29px;box-shadow:0 8px 22px rgba(89,68,49,.08)}.category-view .catalog-tools-sticky .cat-nav{background:rgba(255,255,255,.96)}.category-view .catalog-tools-sticky .search-bar{background:rgba(253,250,244,.97)}
+.shop-path{padding:26px 0 54px}.path-shell{width:min(1120px,calc(100% - 36px));margin:0 auto}.path-panel{padding:38px;border:1px solid var(--border);border-radius:28px;background:#fffdf9;box-shadow:0 18px 45px rgba(100,73,43,.10)}.path-title{margin:0 0 28px;text-align:center;font-family:'Playfair Display',Georgia,serif;font-size:24px;font-weight:500}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.step{position:relative;text-align:center}.step:not(:last-child)::after{content:"";position:absolute;top:21px;left:calc(50% + 28px);right:calc(-50% + 28px);border-top:1px dashed #d9c29b}.step-number{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin:0 auto 12px;border:2px solid #fff;border-radius:50%;background:var(--gold);color:#fff;box-shadow:0 0 0 2px #ead7a3,0 7px 16px rgba(156,107,24,.25);font-size:16px;font-weight:600;line-height:1}.step strong{display:block;font-size:13px;font-weight:600}.step>span:not(.step-number){display:block;margin-top:4px;color:var(--muted);font-size:11px;line-height:1.5}.confidence{display:flex;justify-content:center;gap:18px 34px;flex-wrap:wrap;margin-top:28px;padding-top:24px;border-top:1px solid var(--border);color:var(--muted);font-size:12px}
 .pills{display:flex;justify-content:center;gap:6px;margin-top:12px;flex-wrap:wrap}
 .pill{background:#fff;border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-size:10px;color:var(--muted)}
 .guide{background:var(--gold-lt);border-bottom:1px solid var(--border);padding:7px 16px;display:flex;gap:16px;overflow-x:auto;justify-content:center}
@@ -45,8 +53,8 @@ body{font-family:system-ui,-apple-system,sans-serif;background:var(--cream);colo
 .cat-nav{background:#fff;border-bottom:1px solid var(--border);padding:0 12px;display:flex;gap:2px;overflow-x:auto}
 .cat-btn{border:none;background:transparent;padding:10px 12px;font-size:11px;color:var(--muted);cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;font-family:inherit}
 .cat-btn.active{color:var(--gold-dk);border-bottom:2px solid var(--gold);font-weight:600}
-.products{padding:16px}
-.sec-label{font-size:10px;letter-spacing:1px;color:var(--soft);text-transform:uppercase;margin-bottom:12px}
+.products{width:min(1120px,calc(100% - 36px));margin:0 auto;padding:24px 0 54px}
+.sec-label{font-size:10px;letter-spacing:2px;color:var(--gold-dk);text-transform:uppercase;margin-bottom:18px;text-align:center;font-weight:600}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
 .grid.grouped{display:block}
 .product-group{margin:0 0 34px}
@@ -55,8 +63,28 @@ body{font-family:system-ui,-apple-system,sans-serif;background:var(--cream);colo
 .product-group-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--brown)}
 .product-group-count{font-size:10px;letter-spacing:.7px;text-transform:uppercase;color:var(--soft);white-space:nowrap}
 .product-group-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+.collection-home{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.collection-block{position:relative;aspect-ratio:4/3;border:0;border-radius:24px;overflow:hidden;cursor:pointer;background:var(--cream2);text-decoration:none;display:grid;place-items:center;padding:24px;isolation:isolate;text-align:center;box-shadow:0 12px 30px rgba(100,73,43,.12);transition:transform .25s ease,box-shadow .25s ease}
+.collection-block img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .3s ease}
+.collection-block::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(67,45,24,.06),rgba(255,250,239,.12) 35%,rgba(255,250,239,.18) 65%,rgba(67,45,24,.06));z-index:-1}
+.collection-block:hover{transform:translateY(-4px);box-shadow:0 18px 45px rgba(100,73,43,.13)}.collection-block:hover img{transform:scale(1.025)}
+.collection-block>span{display:flex;flex-direction:column;align-items:center;position:relative;z-index:1}
+.collection-block strong{display:block;color:#a66d16;font-family:'Satisfy','Segoe Script',cursive;font-size:clamp(38px,4.7vw,64px);font-weight:400;line-height:.95;text-shadow:0 2px 18px rgba(255,253,249,.95)}
+.collection-block>span>span{display:inline-flex;margin-top:18px;padding:9px 14px;border:1px solid rgba(198,154,47,.48);border-radius:999px;background:rgba(255,253,249,.9);color:var(--gold-dk);font-size:11px;font-weight:600;box-shadow:0 6px 18px rgba(100,73,43,.1)}
+.accordion-group{border:1px solid var(--border);border-radius:16px;background:#fff;overflow:hidden;margin-bottom:12px}
+.accordion-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;border:0;background:#fff;padding:17px 18px;text-align:left;cursor:pointer;color:var(--text)}
+.accordion-toggle:hover{background:var(--cream2)}
+.accordion-name{font-family:'Playfair Display',serif;font-size:21px;font-weight:600}
+.accordion-meta{display:flex;align-items:center;gap:12px;color:var(--soft);font-size:10px;text-transform:uppercase;letter-spacing:.6px}
+.accordion-chevron{font-size:18px;color:var(--gold-dk);transition:transform .2s ease}
+.accordion-group.open .accordion-chevron{transform:rotate(180deg)}
+.accordion-panel{display:none;padding:0 14px 16px}
+.accordion-group.open .accordion-panel{display:grid}
 @media(max-width:480px){.grid{grid-template-columns:repeat(2,1fr);gap:8px}}
 @media(max-width:480px){.product-group-grid{grid-template-columns:repeat(2,1fr);gap:8px}.product-group{margin-bottom:28px}.product-group-title{font-size:18px}}
+@media(max-width:760px){.hero{min-height:0;padding:64px 18px 54px}.logo-wrap{width:136px;margin-bottom:22px}.path-panel{padding:30px 18px}.steps{grid-template-columns:repeat(2,1fr);gap:28px 12px}.step::after{display:none}}
+@media(max-width:760px){.category-view .hero{margin-top:36px;padding:50px 14px 18px}.category-view .logo-wrap{top:-37px;width:82px}.category-view .hero-phrase{max-width:460px}.category-view .product-group-grid,.category-view #product-grid:not(.grouped){grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.category-view .pcard-body{padding:9px}.category-view .cat-nav{justify-content:flex-start}.category-view .search-bar{margin-top:0}.category-view .category-size-quick{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto}}
+@media(max-width:600px){.collection-home{grid-template-columns:1fr}.accordion-toggle{padding:15px 14px}.accordion-name{font-size:19px}.collection-block strong{font-size:44px}}
 .stock-badge{position:absolute;top:5px;right:5px;font-size:9px;padding:2px 6px;border-radius:7px;font-weight:600}
 .stock-badge.low{background:#FFF3E0;color:#C47000;border:1px solid #F5C842}
 .stock-badge.out{background:#FDE8E8;color:#A32D2D;border:1px solid #F09595}
@@ -68,7 +96,7 @@ body{font-family:system-ui,-apple-system,sans-serif;background:var(--cream);colo
 .spinner{width:36px;height:36px;border:3px solid var(--gold-lt);border-top-color:var(--gold);border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 12px}
 @keyframes spin{to{transform:rotate(360deg)}}
 .loading-wrap{grid-column:1/-1;text-align:center;padding:60px 20px}
-.whatsapp-fab{position:fixed;bottom:20px;right:20px;z-index:201;background:#25D366;color:#fff;border-radius:50%;width:54px;height:54px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.5);text-decoration:none}
+.whatsapp-fab{position:fixed;bottom:20px;right:20px;z-index:201;background:#25D366;color:#fff;border-radius:50%;width:54px;height:54px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.5);text-decoration:none;opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .2s ease,transform .2s ease}
 .chat-fab{position:fixed;bottom:20px;right:20px;width:54px;height:54px;border-radius:50%;background:var(--gold);color:#fff;border:none;cursor:pointer;font-size:22px;box-shadow:0 4px 20px rgba(201,160,64,0.5);z-index:200;display:flex;align-items:center;justify-content:center}
 .chat-popup{position:fixed;bottom:84px;right:20px;width:300px;background:#FDFAF4;border:1px solid var(--border);border-radius:18px;box-shadow:0 8px 32px rgba(44,31,16,0.18);z-index:200;display:none;flex-direction:column;overflow:hidden;max-height:420px}
 .chat-popup.open{display:flex}
@@ -83,7 +111,8 @@ body{font-family:system-ui,-apple-system,sans-serif;background:var(--cream);colo
 .chat-input-area{padding:10px 12px;border-top:1px solid var(--border);background:#fff;display:flex;gap:6px}
 .chat-input-area input{flex:1;padding:7px 10px;border:1px solid #DDD0B8;border-radius:18px;font-size:11px;font-family:inherit}
 .chat-input-area button{background:var(--gold);color:#fff;border:none;border-radius:18px;padding:7px 12px;cursor:pointer;font-size:12px}
-.cart-fab{position:fixed;bottom:20px;left:20px;z-index:200}
+.cart-fab{position:fixed;bottom:20px;left:20px;z-index:200;opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .2s ease,transform .2s ease}
+.catalog-scrolled .cart-fab,.catalog-scrolled .whatsapp-fab{opacity:1;pointer-events:auto;transform:none}
 .cart-fab button{background:var(--gold);color:#fff;border:none;border-radius:24px;padding:12px 18px;font-size:13px;font-weight:600;cursor:pointer;box-shadow:0 4px 16px rgba(201,160,64,0.4);display:flex;align-items:center;gap:8px;font-family:inherit}
 .cart-count-badge{background:#fff;color:var(--gold-dk);border-radius:50%;width:20px;height:20px;font-size:10px;font-weight:700;display:inline-flex;align-items:center;justify-content:center}
 .modal-bg{position:fixed;inset:0;background:rgba(44,31,16,0.55);z-index:300;display:flex;align-items:center;justify-content:center;padding:12px}
@@ -284,25 +313,26 @@ TOAST TESTIMONIO (flotante)
 HERO ORIGINAL
 ══════════════════════════════════════════ -->
 <div class="hero">
-<img src="logo.png" alt="Mágico Amor" style="width:140px;height:140px;border-radius:50%;object-fit:cover;margin-bottom:10px;box-shadow:0 0 0 6px #F7EDCC">
-<h1 class="hero-sub" style="font-weight:400">Ropita de bebé · Franck, Santa Fe · Envíos a todo el país</h1>
-<div class="hero-phrase">"Acompañamos esos comienzos llenos de ternura"</div>
-<button onclick="toggleHistoria()" id="btn-quienes" style="margin-top:14px;background:transparent;border:1px solid var(--gold);border-radius:20px;padding:6px 18px;font-size:11px;color:var(--gold-dk);cursor:pointer;font-family:inherit;font-weight:500">✦ ¿Quiénes somos?</button>
-<div class="pills">
-<span class="pill">🤍 Prendas que abrazan</span>
-<span class="pill">💛 Elegida con amor</span>
-<span class="pill">🎁 Lista para regalar</span>
-<span class="pill">📦 Envíos</span>
+<a class="home-return" href="home-v2.html" aria-label="Volver al inicio">← Volver al inicio</a>
+<div class="hero-inner">
+<div class="logo-wrap"><img src="logo.png?rev=11" alt="Mágico Amor"></div>
+<p class="hero-sub">Ropita de bebé · Franck, Santa Fe</p>
+<h1 id="store-hero-title">Acompañando sus comienzos <em>desde el primer abrazo</em></h1>
+<div class="hero-phrase" id="store-hero-copy">Prendas elegidas con ternura para vestir días pequeños, recuerdos enormes y cada estación de su crecimiento</div>
+<div class="hero-actions"><a class="hero-action" id="store-primary-action" href="#product-grid">Ver la ropita</a><button class="hero-action" onclick="toggleHistoria()" id="btn-quienes" type="button">Conocé nuestra historia</button></div>
 </div>
 </div>
 
-<div class="guide" style="border-bottom:none;padding-bottom:3px">
-<div class="gstep"><div class="gnum">1</div> Elegí tu ropita</div>
-<div class="gstep"><div class="gnum">2</div> Seleccioná el talle</div>
-<div class="gstep"><div class="gnum">3</div> Confirmá el pedido</div>
-<div class="gstep"><div class="gnum">4</div> Coordinamos el envío</div>
+<section class="shop-path" aria-labelledby="como-comprar"><div class="path-shell"><div class="path-panel">
+<h2 class="path-title" id="como-comprar">Elegir es así de simple</h2>
+<div class="steps">
+<div class="step"><span class="step-number">1</span><strong>Elegí tu ropita</strong><span>Recorré el catálogo</span></div>
+<div class="step"><span class="step-number">2</span><strong>Seleccioná el talle</strong><span>Según disponibilidad</span></div>
+<div class="step"><span class="step-number">3</span><strong>Confirmá el pedido</strong><span>Sin pagar todavía</span></div>
+<div class="step"><span class="step-number">4</span><strong>Coordinamos</strong><span>Pago y envío por WhatsApp</span></div>
 </div>
-<div style="background:var(--gold-lt);border-bottom:1px solid var(--border);padding:2px 16px 8px;text-align:center;font-size:10px;color:var(--gold-dk);line-height:1.5">Confirmás sin compromiso — <strong>no pagás nada todavía</strong> · pago y envío se coordinan por WhatsApp</div>
+<div class="confidence" aria-label="Beneficios"><span>♡ Prendas que abrazan</span><span>✦ Elegidas con amor</span><span>🎁 Listas para regalar</span><span>📦 Envíos a todo el país</span></div>
+</div></div></section>
 
 <!-- SECCIÓN HISTORIA DESPLEGABLE -->
 <div id="historia-seccion" style="display:none;background:#fff;border-bottom:1px solid var(--border);padding:32px 20px">
@@ -330,9 +360,11 @@ HERO ORIGINAL
 </div>
 </div>
 
+<div class="catalog-tools-sticky">
 <div class="cat-nav" id="cat-nav">
 <button class="cat-btn active" onclick="filterCat('all',this)">Todo</button>
 </div>
+<div class="category-size-quick" aria-label="Filtrar por talle"><span>Talles</span><button class="size-quick-btn" type="button" onclick="selectQuickSize('RN',this)">RN</button><button class="size-quick-btn" type="button" onclick="selectQuickSize('0',this)">0</button><button class="size-quick-btn" type="button" onclick="selectQuickSize('1',this)">1</button><button class="size-quick-btn" type="button" onclick="selectQuickSize('2',this)">2</button><button class="size-quick-btn" type="button" onclick="selectQuickSize('3',this)">3</button><button class="size-quick-btn" type="button" onclick="selectQuickSize('4',this)">4</button><button class="size-quick-btn" type="button" onclick="selectQuickSize('',this)">Todos</button></div>
 
 <div class="search-bar">
 <input class="search-input" id="search-input" type="text" placeholder="🔍 Buscar producto..." oninput="applyFilters()"/>
@@ -352,9 +384,10 @@ HERO ORIGINAL
 <button class="search-clear" onclick="clearFilters()">✕ Limpiar</button>
 </div>
 <div class="search-results" id="search-results"></div>
+</div>
 
 <div class="products">
-<div class="sec-label">Colección disponible</div>
+<div class="sec-label" id="collection-label">Elegí una colección</div>
 <div class="grid" id="product-grid">
 <div class="loading-wrap"><div class="spinner"></div><div style="font-size:13px;color:var(--muted)">Cargando productos... 💛</div></div>
 </div>
@@ -591,9 +624,11 @@ if(p)valid.push(p);else console.warn('Producto omitido por datos inválidos en l
 if(!valid.length)throw new Error('El catálogo no contiene productos válidos');
 await manifestPromise;
 PRODUCTS=valid.map(function(p,index){p._catalogIndex=index;return p;});
-const requestedCategory=(new URLSearchParams(location.search).get('categoria')||'').trim().toLowerCase();
+const params=new URLSearchParams(location.search);
+const requestedCategory=(params.get('categoria')||'').trim().toLowerCase();
+const requestedGroup=(params.get('grupo')||'').trim().toLowerCase();
 const matchedCategory=[...new Set(PRODUCTS.map(p=>p.cat))].find(c=>c.toLowerCase()===requestedCategory);
-currentCat=matchedCategory||'all';
+currentCat=COMMERCIAL_GROUPS[requestedGroup]?'group:'+requestedGroup:(matchedCategory||'all');
 buildCatNav();renderProducts(currentCat);
 return PRODUCTS;
 }catch(e){
@@ -653,8 +688,11 @@ _sourceIndex:index
 }
 
 function buildCatNav(){
-const cats=['all',...new Set(PRODUCTS.map(p=>p.cat))];
-document.getElementById('cat-nav').innerHTML=cats.map(c=>'<button class="cat-btn'+(c===currentCat?' active':'')+'" onclick="filterCat(\''+c+'\',this)">'+(c==='all'?'Todo':c.charAt(0).toUpperCase()+c.slice(1))+'</button>').join('');
+const order=['bodys','abrigaditos','media-estacion','verano'];
+document.getElementById('cat-nav').innerHTML=order.map(function(key){
+const selection='group:'+key;
+return'<button class="cat-btn'+(selection===currentCat?' active':'')+'" onclick="filterCat(\''+selection+'\',this)">'+COMMERCIAL_GROUPS[key].label+'</button>';
+}).join('');
 }
 
 function filterCat(cat,btn){
@@ -688,12 +726,38 @@ img.replaceWith(fallback);
 },true);
 }
 
+const COMMERCIAL_GROUPS={
+'bodys':{label:'Bodys largos',intro:'Bodys largos, conjuntos plush y enteritos para acompañar sus primeros días.',categories:['body largo','conjunto plush','enterito']},
+'abrigaditos':{label:'Abrigaditos',intro:'Capas suaves y calentitas: conjuntos plush, ajuares, enteritos, buzos y camperas.',categories:['conjunto plush','ajuar','enterito','buzo','campera']},
+'media-estacion':{label:'Media estación',intro:'Prendas cómodas para días cambiantes: conjuntos largos, pantalones, enteritos y calzas.',categories:['conjunto largo','pantalón','enterito','calza']},
+'verano':{label:'Verano',intro:'Opciones frescas y livianas: bodys cortos, shorts, conjuntos y complementos.',categories:['body corto','short','conjunto corto','complementos']}
+};
 let currentCat='all';
+
+function configureCatalogHero(groupKey){
+const group=COMMERCIAL_GROUPS[groupKey];
+if(!group)return;
+document.body.classList.add('category-view');
+document.querySelector('.hero-sub').textContent='Colección Mágico Amor';
+document.getElementById('store-hero-title').textContent=group.label;
+document.getElementById('store-hero-copy').textContent=group.intro;
+document.getElementById('store-primary-action').textContent='Ver artículos';
+}
+
+function productsForSelection(selection){
+if(selection.indexOf('group:')===0){
+const group=COMMERCIAL_GROUPS[selection.slice(6)];
+if(!group)return[];
+return PRODUCTS.filter(function(p){return group.categories.some(function(cat){return p.cat.toLowerCase()===cat;});});
+}
+return selection==='all'?PRODUCTS:PRODUCTS.filter(function(p){return p.cat===selection;});
+}
 
 function applyFilters(){
 const q=document.getElementById('search-input').value.toLowerCase().trim();
 const talle=document.getElementById('talle-select').value;
-let items=currentCat==='all'?PRODUCTS:PRODUCTS.filter(p=>p.cat===currentCat);
+document.querySelectorAll('.size-quick-btn').forEach(function(button){button.classList.toggle('active',button.textContent.trim()===(talle||'Todos'));});
+let items=productsForSelection(currentCat);
 if(q)items=items.filter(p=>p.name.toLowerCase().includes(q)||p.cat.toLowerCase().includes(q));
 if(talle)items=items.filter(p=>Object.keys(p.sizes).includes(talle)&&p.sizes[talle]>0);
 const res=document.getElementById('search-results');
@@ -704,7 +768,30 @@ renderList(items);
 
 function clearFilters(){
 document.getElementById('search-input').value='';document.getElementById('talle-select').value='';
+document.querySelectorAll('.size-quick-btn').forEach(function(button){button.classList.remove('active');});
 document.getElementById('search-results').style.display='none';renderProducts(currentCat);
+}
+
+function selectQuickSize(size,button){
+document.getElementById('talle-select').value=size;
+document.querySelectorAll('.size-quick-btn').forEach(function(item){item.classList.toggle('active',item===button);});
+applyFilters();
+document.getElementById('product-grid').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function toggleCommercialGroup(button){
+const section=button.closest('.accordion-group');
+const wasOpen=section.classList.contains('open');
+document.querySelectorAll('.accordion-group.open').forEach(function(item){
+item.classList.remove('open');
+const control=item.querySelector('.accordion-toggle');
+if(control)control.setAttribute('aria-expanded','false');
+});
+if(!wasOpen){
+section.classList.add('open');
+button.setAttribute('aria-expanded','true');
+setTimeout(function(){section.scrollIntoView({behavior:'smooth',block:'start'});},50);
+}
 }
 
 function buildCard(p){
@@ -730,17 +817,39 @@ grid.innerHTML=items.map(p=>buildCard(p)).join('');
 
 function renderProducts(cat){
 currentCat=cat;
-const items=cat==='all'?PRODUCTS:PRODUCTS.filter(p=>p.cat===cat);
+const items=productsForSelection(cat);
 const grid=document.getElementById('product-grid');
-grid.classList.toggle('grouped',cat==='all');
+const isGroup=cat.indexOf('group:')===0;
+const group=isGroup?COMMERCIAL_GROUPS[cat.slice(6)]:null;
+const catNav=document.getElementById('cat-nav');
+const searchBar=document.querySelector('.search-bar');
+const label=document.getElementById('collection-label');
+catNav.style.display='flex';
+searchBar.style.display=cat==='all'?'none':'flex';
+if(label)label.textContent=cat==='all'?'Elegí una colección':isGroup?'Colección '+group.label:'Colección disponible';
+grid.classList.toggle('grouped',cat==='all'||isGroup);
 if(!items.length){grid.innerHTML='<div class="loading-wrap"><div style="font-size:13px;color:var(--muted)">No hay productos en esta categoría 💛</div></div>';return;}
 bindImageFallbacks(grid);
-if(cat!=='all'){grid.innerHTML=items.map(p=>buildCard(p)).join('');return;}
+if(cat!=='all'&&!isGroup){grid.innerHTML=items.map(p=>buildCard(p)).join('');return;}
+if(cat==='all'){
+grid.innerHTML='<div class="collection-home">'
++'<a class="collection-block" href="?grupo=bodys"><img src="categoria-bodys-largos-v2.webp" alt=""><span><strong>Bodys largos</strong><span>Ver opciones →</span></span></a>'
++'<a class="collection-block" href="?grupo=abrigaditos"><img src="categoria-abrigaditos-v3.webp" alt=""><span><strong>Abrigaditos</strong><span>Ver opciones →</span></span></a>'
++'<a class="collection-block" href="?grupo=media-estacion"><img src="categoria-media-estacion-v3.webp" alt=""><span><strong>Media estación</strong><span>Ver opciones →</span></span></a>'
++'<a class="collection-block" href="?grupo=verano"><img src="categoria-verano-v3.webp" alt=""><span><strong>Verano</strong><span>Ver opciones →</span></span></a>'
++'</div>';
+return;
+}
 const groups=new Map();
 items.forEach(function(p){if(!groups.has(p.cat))groups.set(p.cat,[]);groups.get(p.cat).push(p);});
-grid.innerHTML=[...groups.entries()].map(function(entry){
+const orderedEntries=isGroup?group.categories.map(function(category){
+const actual=[...groups.keys()].find(function(key){return key.toLowerCase()===category;});
+return actual?[actual,groups.get(actual)]:null;
+}).filter(Boolean):[...groups.entries()];
+grid.innerHTML=orderedEntries.map(function(entry,index){
 const name=entry[0],products=entry[1];
-return'<section class="product-group"><div class="product-group-head"><h2 class="product-group-title">'+name.charAt(0).toUpperCase()+name.slice(1)+'</h2><span class="product-group-count">'+products.length+' producto'+(products.length!==1?'s':'')+'</span></div><div class="product-group-grid">'+products.map(p=>buildCard(p)).join('')+'</div></section>';
+const panelId='accordion-panel-'+index;
+return'<section class="accordion-group"><button class="accordion-toggle" type="button" aria-expanded="false" aria-controls="'+panelId+'" onclick="toggleCommercialGroup(this)"><span class="accordion-name">'+name.charAt(0).toUpperCase()+name.slice(1)+'</span><span class="accordion-meta">'+products.length+' producto'+(products.length!==1?'s':'')+' <span class="accordion-chevron">⌄</span></span></button><div class="product-group-grid accordion-panel" id="'+panelId+'">'+products.map(p=>buildCard(p)).join('')+'</div></section>';
 }).join('');
 }
 
@@ -855,14 +964,13 @@ if(!visible) sec.scrollIntoView({behavior:'smooth',block:'start'});
 
 // ── INIT ──────────────────────────────────────────
 updateCartCount();
+configureCatalogHero((new URLSearchParams(location.search).get('grupo')||'').trim().toLowerCase());
 loadProducts();
 buildCarrusel();
-// Historia: se abre sola SOLO si la visita no viene de un anuncio o red social.
-// Quien clickea una publicidad va directo al catálogo; quien entra directo/orgánico ve la historia.
-const esDeAnuncio=/[?&](fbclid|gclid|ttclid|utm_source|utm_medium|utm_campaign)=/i.test(location.search)||/facebook\.com|instagram\.com|l\.instagram/i.test(document.referrer);
-const vieneDePortada=/home-v2\.html/i.test(document.referrer)||new URLSearchParams(location.search).has('categoria');
-if(!esDeAnuncio&&!vieneDePortada)mostrarHistoria();
-iniciarToasts();
+// La historia queda disponible desde su botón, sin interrumpir la entrada a la tienda.
+function actualizarAccionesFlotantes(){document.body.classList.toggle('catalog-scrolled',window.scrollY>420);}
+window.addEventListener('scroll',actualizarAccionesFlotantes,{passive:true});
+actualizarAccionesFlotantes();
 </script>
 </body>
 </html>
