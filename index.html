@@ -753,15 +753,30 @@ return PRODUCTS.filter(function(p){return group.categories.some(function(cat){re
 return selection==='all'?PRODUCTS:PRODUCTS.filter(function(p){return p.cat===selection;});
 }
 
+function canonicalSize(value){
+return String(value==null?'':value).trim().toUpperCase();
+}
+
+function hasAvailableSize(product,size){
+const wanted=canonicalSize(size);
+return Object.entries(product.sizes).some(function(entry){
+return canonicalSize(entry[0])===wanted&&Number(entry[1])>0;
+});
+}
+
 function applyFilters(){
 const q=document.getElementById('search-input').value.toLowerCase().trim();
 const talle=document.getElementById('talle-select').value;
 document.querySelectorAll('.size-quick-btn').forEach(function(button){button.classList.toggle('active',button.textContent.trim()===(talle||'Todos'));});
 let items=productsForSelection(currentCat);
 if(q)items=items.filter(p=>p.name.toLowerCase().includes(q)||p.cat.toLowerCase().includes(q));
-if(talle)items=items.filter(p=>Object.keys(p.sizes).includes(talle)&&p.sizes[talle]>0);
+if(talle)items=items.filter(function(product){return hasAvailableSize(product,talle);});
 const res=document.getElementById('search-results');
-if(q||talle){res.style.display='block';res.textContent='Se encontraron '+items.length+' producto'+(items.length!==1?'s':'')+' '+(q?'con "'+q+'"':'')+' '+(talle?'en talle '+talle:'');}
+if(q||talle){
+const group=currentCat.indexOf('group:')===0?COMMERCIAL_GROUPS[currentCat.slice(6)]:null;
+res.style.display='block';
+res.textContent=items.length+' prenda'+(items.length!==1?'s':'')+(talle?' disponible'+(items.length!==1?'s':'')+' en talle '+talle:'')+(group?' dentro de '+group.label:'')+(q?' con "'+q+'"':'');
+}
 else res.style.display='none';
 renderList(items);
 }
