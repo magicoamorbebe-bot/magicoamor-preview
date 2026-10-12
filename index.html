@@ -688,7 +688,7 @@ _sourceIndex:index
 }
 
 function buildCatNav(){
-const order=['bodys','abrigaditos','media-estacion','verano'];
+const order=['bodys','abrigaditos','media-estacion','verano','ajuares-y-sets','complementos'];
 document.getElementById('cat-nav').innerHTML=order.map(function(key){
 const selection='group:'+key;
 return'<button class="cat-btn'+(selection===currentCat?' active':'')+'" onclick="filterCat(\''+selection+'\',this)">'+COMMERCIAL_GROUPS[key].label+'</button>';
@@ -727,10 +727,12 @@ img.replaceWith(fallback);
 }
 
 const COMMERCIAL_GROUPS={
-'bodys':{label:'Bodys largos',intro:'Bodys largos para acompañar sus primeros días.',categories:['body largo']},
-'abrigaditos':{label:'Abrigaditos',intro:'Capas suaves y calentitas: conjuntos plush, ajuares, enteritos, buzos y camperas.',categories:['conjunto plush','ajuar','enterito','buzo','campera']},
-'media-estacion':{label:'Media estación',intro:'Prendas cómodas para días cambiantes: conjuntos largos, pantalones, enteritos y calzas.',categories:['conjunto largo','pantalón','enterito','calza']},
-'verano':{label:'Verano',intro:'Opciones frescas y livianas: bodys cortos, shorts, conjuntos y complementos.',categories:['body corto','short','conjunto corto','complementos']}
+'bodys':{label:'Bodys largos',intro:'Bodys largos para acompañar sus primeros días.',categories:['bodys largos','body largo']},
+'abrigaditos':{label:'Abrigaditos',intro:'Capas suaves y calentitas para los días más frescos.',categories:['abrigaditos','conjunto plush','enterito','buzo','campera']},
+'media-estacion':{label:'Media estación',intro:'Prendas cómodas para acompañar los días cambiantes.',categories:['media estación','media estacion','conjunto largo','pantalón','enterito','calza']},
+'verano':{label:'Verano',intro:'Opciones frescas y livianas para los días más cálidos.',categories:['verano','body corto','short','conjunto corto']},
+'ajuares-y-sets':{label:'Ajuares y sets',intro:'Conjuntos pensados para acompañar sus primeros días.',categories:['ajuares y sets','ajuar','ajuares','set','sets']},
+'complementos':{label:'Complementos',intro:'Baberos, babitas y bandanas para sumar a cada elección.',categories:['complementos','babero','baberos','babita','babitas','bandana','bandanas']}
 };
 let currentCat='all';
 
@@ -852,6 +854,8 @@ grid.innerHTML='<div class="collection-home">'
 +'<a class="collection-block" href="?grupo=abrigaditos"><img src="categoria-abrigaditos-v3.webp" alt=""><span><strong>Abrigaditos</strong><span>Ver opciones →</span></span></a>'
 +'<a class="collection-block" href="?grupo=media-estacion"><img src="categoria-media-estacion-v3.webp" alt=""><span><strong>Media estación</strong><span>Ver opciones →</span></span></a>'
 +'<a class="collection-block" href="?grupo=verano"><img src="categoria-verano-v3.webp" alt=""><span><strong>Verano</strong><span>Ver opciones →</span></span></a>'
++'<a class="collection-block" href="?grupo=ajuares-y-sets"><img src="categoria-ajuares-y-sets-v1.webp" alt=""><span><strong>Ajuares y sets</strong><span>Ver opciones →</span></span></a>'
++'<a class="collection-block" href="?grupo=complementos"><img src="categoria-complementos-v1.webp" alt=""><span><strong>Complementos</strong><span>Ver opciones →</span></span></a>'
 +'</div>';
 return;
 }
