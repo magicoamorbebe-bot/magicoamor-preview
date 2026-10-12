@@ -216,7 +216,7 @@ SECCIÓN EXPERIENCIAS (al final)
 ══════════════════════════════════════════ */
 .experiencias-section{background:var(--gold-lt);padding:48px 20px;border-top:1px solid var(--border)}
 .exp-eyebrow{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;text-align:center;margin-bottom:8px}
-.exp-title{font-family:'Playfair Display',serif;font-size:22px;font-style:italic;text-align:center;color:var(--text);margin-bottom:32px}
+.exp-title{font-family:'Playfair Display',serif;font-size:22px;font-style:normal;text-align:center;color:var(--text);margin-bottom:32px}
 
 /* Carrusel */
 .carrusel-wrap{position:relative;max-width:420px;margin:0 auto 36px}
@@ -398,7 +398,7 @@ SECCIÓN EXPERIENCIAS (al final del catálogo)
 ══════════════════════════════════════════ -->
 <section class="experiencias-section" id="experiencias">
 <p class="exp-eyebrow">Lo que cuentan las familias</p>
-<h2 class="exp-title">Experiencias reales 💛</h2>
+<h2 class="exp-title">Experiencias reales</h2>
 
 <!-- Carrusel de testimonios -->
 <div class="carrusel-wrap">
@@ -727,7 +727,7 @@ img.replaceWith(fallback);
 }
 
 const COMMERCIAL_GROUPS={
-'bodys':{label:'Bodys largos',intro:'Bodys largos, conjuntos plush y enteritos para acompañar sus primeros días.',categories:['body largo','conjunto plush','enterito']},
+'bodys':{label:'Bodys largos',intro:'Bodys largos para acompañar sus primeros días.',categories:['body largo']},
 'abrigaditos':{label:'Abrigaditos',intro:'Capas suaves y calentitas: conjuntos plush, ajuares, enteritos, buzos y camperas.',categories:['conjunto plush','ajuar','enterito','buzo','campera']},
 'media-estacion':{label:'Media estación',intro:'Prendas cómodas para días cambiantes: conjuntos largos, pantalones, enteritos y calzas.',categories:['conjunto largo','pantalón','enterito','calza']},
 'verano':{label:'Verano',intro:'Opciones frescas y livianas: bodys cortos, shorts, conjuntos y complementos.',categories:['body corto','short','conjunto corto','complementos']}
@@ -842,7 +842,7 @@ const label=document.getElementById('collection-label');
 catNav.style.display='flex';
 searchBar.style.display=cat==='all'?'none':'flex';
 if(label)label.textContent=cat==='all'?'Elegí una colección':isGroup?'Colección '+group.label:'Colección disponible';
-grid.classList.toggle('grouped',cat==='all'||isGroup);
+grid.classList.toggle('grouped',cat==='all');
 if(!items.length){grid.innerHTML='<div class="loading-wrap"><div style="font-size:13px;color:var(--muted)">No hay productos en esta categoría 💛</div></div>';return;}
 bindImageFallbacks(grid);
 if(cat!=='all'&&!isGroup){grid.innerHTML=items.map(p=>buildCard(p)).join('');return;}
@@ -855,6 +855,10 @@ grid.innerHTML='<div class="collection-home">'
 +'</div>';
 return;
 }
+if(isGroup){
+grid.innerHTML=items.map(function(product){return buildCard(product);}).join('');
+return;
+}
 const groups=new Map();
 items.forEach(function(p){if(!groups.has(p.cat))groups.set(p.cat,[]);groups.get(p.cat).push(p);});
 const orderedEntries=isGroup?group.categories.map(function(category){
@@ -864,7 +868,7 @@ return actual?[actual,groups.get(actual)]:null;
 grid.innerHTML=orderedEntries.map(function(entry,index){
 const name=entry[0],products=entry[1];
 const panelId='accordion-panel-'+index;
-return'<section class="accordion-group"><button class="accordion-toggle" type="button" aria-expanded="false" aria-controls="'+panelId+'" onclick="toggleCommercialGroup(this)"><span class="accordion-name">'+name.charAt(0).toUpperCase()+name.slice(1)+'</span><span class="accordion-meta">'+products.length+' producto'+(products.length!==1?'s':'')+' <span class="accordion-chevron">⌄</span></span></button><div class="product-group-grid accordion-panel" id="'+panelId+'">'+products.map(p=>buildCard(p)).join('')+'</div></section>';
+return'<section class="accordion-group"><button class="accordion-toggle" type="button" aria-expanded="false" aria-controls="'+panelId+'" onclick="toggleCommercialGroup(this)"><span class="accordion-name">'+name.charAt(0).toUpperCase()+name.slice(1)+'</span><span class="accordion-meta"><span class="accordion-chevron">⌄</span></span></button><div class="product-group-grid accordion-panel" id="'+panelId+'">'+products.map(p=>buildCard(p)).join('')+'</div></section>';
 }).join('');
 }
 
